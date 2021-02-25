@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstraintActivity">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/img_poster"
+        android:layout_width="128dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/holo_orange_light"
+        android:contentDescription="@string/content_desc_image_poster"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/img_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_background"
+        app:layout_constraintVertical_bias="0.274"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/beauty_and_the_beast"
+        app:layout_constraintStart_toEndOf="@+id/img_poster"
+        app:layout_constraintTop_toBottomOf="@+id/img_background" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/img_poster"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="@tools:sample/lorem" />
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/left"
+        app:layout_constraintEnd_toStartOf="@id/btn_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_poster" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_left"
+        app:layout_constraintTop_toBottomOf="@id/img_poster" />
+
+    <View
+        android:id="@+id/circle_a"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_view"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/circle_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_left" />
+
+    <View
+        android:id="@+id/circle_b"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_view"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toStartOf="@id/circle_c"
+        app:layout_constraintStart_toEndOf="@id/circle_a"
+        app:layout_constraintTop_toBottomOf="@id/btn_left" />
+
+    <View
+        android:id="@+id/circle_c"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_view"
+        android:backgroundTint="@android:color/holo_orange_light"
+        app:layout_constraintEnd_toStartOf="@id/circle_d"
+        app:layout_constraintStart_toEndOf="@id/circle_b"
+        app:layout_constraintTop_toBottomOf="@id/btn_left" />
+
+    <View
+        android:id="@+id/circle_d"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_view"
+        android:backgroundTint="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle_c"
+        app:layout_constraintTop_toBottomOf="@id/btn_left" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/circle_a"
+        tools:maxLines="5"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/tv_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/circle_a"
+        app:layout_constraintEnd_toEndOf="@id/circle_a"
+        app:layout_constraintStart_toStartOf="@id/circle_a"
+        app:layout_constraintTop_toTopOf="@id/circle_a" />
+
+    <TextView
+        android:id="@+id/tv_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/b"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/circle_b"
+        app:layout_constraintEnd_toEndOf="@id/circle_b"
+        app:layout_constraintStart_toStartOf="@id/circle_b"
+        app:layout_constraintTop_toTopOf="@id/circle_b" />
+
+    <TextView
+        android:id="@+id/tv_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/circle_c"
+        app:layout_constraintEnd_toEndOf="@id/circle_c"
+        app:layout_constraintStart_toStartOf="@id/circle_c"
+        app:layout_constraintTop_toTopOf="@id/circle_c" />
+
+    <TextView
+        android:id="@+id/tv_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/d"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/circle_d"
+        app:layout_constraintEnd_toEndOf="@id/circle_d"
+        app:layout_constraintStart_toStartOf="@id/circle_d"
+        app:layout_constraintTop_toTopOf="@id/circle_d" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

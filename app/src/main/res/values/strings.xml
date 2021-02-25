@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Learn Layouting</string>
+    <string name="beauty_and_the_beast">Beauty and The Beast</string>
+    <string name="content_desc_image_poster">Image poster</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
 </resources>
